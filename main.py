@@ -1,15 +1,33 @@
 #!/usr/bin/python3
-import argparse
-import string
+"""
+#Hacktoberfest 2017
+This will take input and rot13 the input.
+"""
 
-parser = argparse.ArgumentParser(description='ROT13')
-parser.add_argument('string', metavar='string', type=str, nargs='+', help='rot 13 for alphabet only chars.')
-# parser.add_argument('-l', metavar='lowercase', type=str, nargs='+', help='make lowercase.')
-# parser.add_argument('-u', metavar='uppercase', type=str, nargs='+', help='make uppercase.')
+def rot13():
+    import string
 
-args = parser.parse_args()
-text = args.string
+    alphabet = string.ascii_lowercase
+    text = input("Rot 13 Text:\n").lower()
+    rotated = []
 
-alphabet = string.ascii_lowercase
-print(text)
-print(alphabet)
+    for letter in text:
+        if letter.isalpha():
+            position = alphabet.find(letter)
+
+            if position < 13:
+                new_letter = alphabet[position + 13]
+                rotated.append(new_letter)
+            elif position >= 13:
+                new_letter = alphabet[position - 13]
+                rotated.append(new_letter)
+
+        else:
+            new_letter = letter
+            rotated.append(new_letter)
+
+    print()
+    print("Old:\t" + text)
+    print("New:\t" + ''.join(rotated))
+
+rot13()
