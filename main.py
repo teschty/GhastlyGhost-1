@@ -4,6 +4,8 @@
 This will take input and rot13 the input.
 """
 
+import argparse
+
 def rot13():
     import string
 
@@ -30,4 +32,16 @@ def rot13():
     print("Old:\t" + text)
     print("New:\t" + ''.join(rotated))
 
-rot13()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Choose a mode")
+    parser.add_argument("mode", type=str, nargs='1',
+                    help='mode to use')
+    
+    args = parser.parse_args()
+
+    if args.mode == "rot13":
+        pass
+    elif args.mode == "hn":
+        pass
+    elif args.mode == "piglatin":
+        pass
