@@ -34,14 +34,15 @@ def rot13():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Choose a mode")
-    parser.add_argument("mode", type=str, nargs='1',
+    parser.add_argument("mode", type=str, nargs=1,
                     help='mode to use')
     
     args = parser.parse_args()
-
-    if args.mode == "rot13":
+    mode = args.mode[0]
+    
+    if mode == "rot13":
         pass
-    elif args.mode == "hn":
+    elif mode == "hn":
         pass
-    elif args.mode == "piglatin":
+    elif mode == "piglatin":
         pass
