@@ -17,16 +17,13 @@ Takes an input string and can do various things.
 Rot 13:
 ./main.py -r13
 Old:    the quick brown fox jumps over the lazy dog
-New:    gur dhvpx oebja sbk whzcf bire gur ynml qbt
-```
+New:    gur dhvpx oebja sbk whzcf bire gur ynml qbt```
 ```
 Basic Palindrome Check
 ./main.py -pal racecar
-"racecar" is a palindrome!
-```
+"racecar" is a palindrome!```
 ```
 Basic Pig Latin
 ./main.py -pig hey there
 Old:    hey there
-New:    ey-hay here-tay
-```
+New:    ey-hay here-tay```
