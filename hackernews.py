@@ -1,8 +1,16 @@
+#!/usr/bin/python3
+
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+import requests
 
-html = urlopen("https://news.ycombinator.com/").read().decode('utf-8')
-soup = BeautifulSoup(html)
+data = requests.get("https://news.ycombinator.com/").text
+soup = BeautifulSoup(data, "html5lib")
 
-# IF ONLY SOMEONE COULD COMPLETE THIS :(
-# AND MAKE IT DISPLAY THE TOP 10 TITLES FROM HACKER NEWS
+counter = 0
+for story in soup.find_all("a", class_="storylink"):
+    if counter < 10:
+        counter += 1
+        print("~~~~~~~")
+        print("{0}. {1.string}".format(counter, story))
+
+print("~~~~~~~")
