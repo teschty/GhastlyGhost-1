@@ -11,7 +11,7 @@ import argparse
 def pig_latin(text):
     pig_word = []
     for word in text:
-        pig_word.append(word[1:].lower() + word[0].lower() + "ay")
+        pig_word.append(word[1:].lower() + "-" + word[0].lower() + "ay")
 
     print("Old:\t" + ' '.join(text).lower())
     print("New:\t" + ' '.join(pig_word))

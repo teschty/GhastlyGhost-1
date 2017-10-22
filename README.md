@@ -4,15 +4,28 @@
 [![](https://img.shields.io/badge/license-MIT%20-blue.svg)](https://github.com/blhowell/python_scripts)
 
 ## Summary:
+Takes an input string and can do various things.
+|Supports:||
+--- | --- | ---
+*rot13* | `(-r13)`
+*basic palindrome check* | `(-pal)`
+*basic pig latin* | `(-r13)`
 
-Takes an input string. Does a ROT 13 on it.
-
-## Example
-
+## Examples
 ```
-Rot 13 Text:
-the quick brown fox jumps over the lazy dog
-
+Rot 13:
+./main.py -r13
 Old:    the quick brown fox jumps over the lazy dog
 New:    gur dhvpx oebja sbk whzcf bire gur ynml qbt
+```
+```
+Basic Palindrome Check
+./main.py -pal racecar
+"racecar" is a palindrome!
+```
+```
+Basic Pig Latin
+./main.py -pig hey there
+Old:    hey there
+New:    ey-hay here-tay
 ```
