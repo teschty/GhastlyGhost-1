@@ -9,7 +9,7 @@ Takes an input string and can do various things.
 |Supports:      |       |
 | ------------- | -----:|
 | **rot13**      |`(-r13)`|
-| **basic palindrom check**|`(-pal)`|
+| **basic palindrome check**|`(-pal)`|
 | **basic pig latin** |`(-pig)`|
 
 ## Examples
