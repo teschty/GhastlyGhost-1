@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-#Hacktoberfest 2017
+#Hacktoberfest 2018
 This can take input and do something.
 """
 
