@@ -10,7 +10,7 @@ counter = 0
 for story in soup.find_all("a", class_="storylink"):
     if counter < 10:
         counter += 1
-        print("~~~~~~~")
+        print("~~~~~~~~")
         print("{0}. {1.string}".format(counter, story))
 
-print("~~~~~~~")
+print("~~~~~~~~")
