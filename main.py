@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 #Hacktoberfest 2017
-This can take input and do something.
+This can take input and perform various operations. 
 """
 
 import argparse
