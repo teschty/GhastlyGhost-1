@@ -9,9 +9,7 @@ import argparse
 
 # Basic. Not very correct.
 def pig_latin(text):
-    pig_word = []
-    for word in text:
-        pig_word.append(word[1:].lower() + "-" + word[0].lower() + "ay")
+    pig_word = [f"{word[1:].lower()}-{word[0].lower()}ay" for word in text]
 
     print("Old:\t" + ' '.join(text).lower())
     print("New:\t" + ' '.join(pig_word))
